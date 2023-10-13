@@ -1,4 +1,6 @@
-Pour cette exercice, nous avons en premier lieu prit le contrôle de notre machine Debian par SSH comme le montre l'image ci-dessous : 
+# Préparation de disque : 
+
+Pour cet exercice, nous avons en premier lieu prit le contrôle de notre machine Debian par SSH comme le montre l'image ci-dessous : 
 ![image1](https://github.com/ThomasDominici/Checkpoint/blob/main/Ressources_Screens/prisecontroledebian.JPG?raw=true)
 
 Nous avons ensuite découpé notre disque /dev/sdb en deux partitions. Pour cela, étant en root, nous n'avons pas eu besoin de la comande sudo pour le reste de l'exercice. 
@@ -32,4 +34,29 @@ swapoff /dev/sda5
 swapon /dev/sdb2
 ```
 
+Voci le résultat de la commande **blkid** avec le label DATA pour notre partition /dev/sdb1 : 
+
+![image4](https://github.com/ThomasDominici/Checkpoint/blob/main/Ressources_Screens/blkid.JPG?raw=true)
+
+
+# Montage : 
+
+Nous avons créé un dossier **data** dans /mnt : 
+```Bash
+mkdir /mnt/data
+```
+
+Puis nous avons réalisé le montage automatique en utilisant l'UUID que nous avons obtenu grâce à la commande précédente **blkid** comme le montre la photo suivante : 
+
+![image5](https://github.com/ThomasDominici/Checkpoint/blob/main/Ressources_Screens/montageautomnt.JPG?raw=true)
+
+Nous avons ensuite redémarré la machine pour tester et avons utilisé : 
+```Bash
+df -h
+```
+
+Notre montage automatique est bien actif, comme le montre cette dernière image : 
+![image6](https://github.com/ThomasDominici/Checkpoint/blob/main/Ressources_Screens/mont%C3%A9dansdata.JPG?raw=true)
+
+Nous avons fini l'exercice 1 proposé.
 
