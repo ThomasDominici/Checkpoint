@@ -15,3 +15,31 @@ sudo chmod 744 myfile
 *.pdf
 ```
 Tous les pdf seront donc ignorés lors d'un push depuis notre git local.
+
+
+4 - Quelles commandes git utiliser pour fusionner les branches **main** et **test_valide** ?  
+Une fois que nous avons fini nos tests sur la branche secondaire (test_valide), nous allons verifier que nous sommes bien sur cette branche : 
+```Bash
+git log
+```
+Une fois que nous avons bien fait cette vérification et effectué nos ajouts : 
+```Bash
+git add
+git commit -m "tests validés"
+```
+
+Nous pouvons effectuer la commande suivante : 
+```Bash
+git push origin main
+```
+
+Cela va permettre de push tous nos éléments de la branche **test_valide** vers la branch **main**.
+
+5 - Pour afficher le texte de la question 5, la ligne de commande est la suivante : 
+```Bash
+echo -e 'Malgré le prix élevé de 100$, il a dit "Bonjour !" au vendeur :\n- "Bonjour est-ce que ce clavier fonctionne bien ?"\n- "Evidemment ! On peut tout écrire avec, que ce soit des pipe | ou bien des backslash \\\\ !"\n- "Même des tildes ~ ?"\n- "Evidemment !"'
+```
+
+
+
+    
