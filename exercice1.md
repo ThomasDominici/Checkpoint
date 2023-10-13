@@ -48,6 +48,10 @@ mkdir /mnt/data
 
 Puis nous avons réalisé le montage automatique en utilisant l'UUID que nous avons obtenu grâce à la commande précédente **blkid** comme le montre la photo suivante : 
 
+```Bash
+nano /etc/fstab
+```
+
 ![image5](https://github.com/ThomasDominici/Checkpoint/blob/main/Ressources_Screens/montageautomnt.JPG?raw=true)
 
 Nous avons ensuite redémarré la machine pour tester et avons utilisé : 
