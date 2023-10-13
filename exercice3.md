@@ -39,7 +39,20 @@ Cela va permettre de push tous nos éléments de la branche **test_valide** vers
 ```Bash
 echo -e 'Malgré le prix élevé de 100$, il a dit "Bonjour !" au vendeur :\n- "Bonjour est-ce que ce clavier fonctionne bien ?"\n- "Evidemment ! On peut tout écrire avec, que ce soit des pipe | ou bien des backslash \\\\ !"\n- "Même des tildes ~ ?"\n- "Evidemment !"'
 ```
-
+  
+  
+6 - Pour mettre en avant le processus **gedit**, la commande est la suivante : 
+(n'étant pas sur de comprendre la question, je met deux possibilités ici)  
+```Bash
+fg %1
+```V
+Cette commande sert à mettre en avant gedit et le relancer s'il est en pause.
+  
+Ou sinon :
+```Bash
+renice 1 -p 37970
+```
+On met bien l'identifiant du processus, cette commande permet de le mettre en priorité 1.  
 
 
     
